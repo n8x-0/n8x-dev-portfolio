@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: meua;
+    src: url('src/PPNeueMachina-PlainRegular.ttf');
+}
+:root{
+    --black: #000;
+    --white: white;
+    --cyan: #AEDEE0;
+    --zinc: #27272a;
+    --blackTxt: white;
+    --whiteTxt: #000000c7;
+    --cyanTxt: #13383a;
+    --zincTxt: #ebebeb;
+    --whiteInpBg: #e9e9e9;
+    --zincInpBg: #3f3f46;
+}
+
+body[theme='black'] {
+    background-color: var(--black);
+}
+body[theme='black'] .section, 
+body[theme='black'] header {
+    color: var(--blackTxt);
+}
+body[theme='cyan'], 
+body[theme='cyan'] header, 
+body[theme='cyan'] .apply {
+    background-color: var(--cyan);
+}
+body[theme='cyan'] .section, 
+body[theme='cyan'] .apply {
+    color: var(--cyanTxt);
+}
+body[theme='zinc'], 
+body[theme='zinc'] header, 
+body[theme='zinc'] .apply {
+    background-color: var(--zinc);
+}
+body[theme='zinc'] .section, 
+body[theme='zinc'] .apply {
+    color: var(--zincTxt);
+    border-color: #D8D8D5;
+}
+body[theme='white'],
+body[theme='white'] header, 
+body[theme='white'] .apply {
+    background-color: var(--white);
+    border-color: var(--zinc);
+}
+body[theme='white'] .section,
+body[theme='white'] .apply {
+    color: var(--whiteTxt);
+}
+body[theme='white'] .inp{
+    background-color: var(--whiteInpBg);
+    color: #000;
+}
+body[theme='zinc'] .inp{
+    background-color: var(--zincInpBg);
+    color: var(--zincTxt);
+}
+.cardImg{
+    filter: hue-rotate(220deg);
+    opacity: 0.7;
+    mix-blend-mode: difference;
+}
+.layer1{
+    clip-path: circle(var(--circ) at 50% 47%);
+}
+body{
+    transition: background-color ease-in-out 0.5s;
+}
+.transCard{
+    background-color: #0b2425;
+    color: #AEDEE0;
+    transition: ease-in-out 1s background-color;
+}
+.socialTrans:hover{
+    scale: 1.15;
+    transition: ease-out 0.2s scale;
+}
+#loop>div{
+    font-weight: 400;
+    animation: move 12s linear infinite
+}
+@keyframes move {
+    0%{
+        transform:  translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@font-face {
+    font-family: sauda;
+    src: url('src/Saudagar.ttf');
+}
+@font-face {
+    font-family: scream;
+    src: url('src/SCREAMOU.TTF');
+}
