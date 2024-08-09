@@ -1,4 +1,6 @@
-window.addEventListener("resize", () => window.location.reload());
+if (window.innerWidth > 500) {
+    window.addEventListener("resize", () => window.location.reload());
+}
 
 (function () {
     const locomotiveScroll = new LocomotiveScroll();
@@ -15,7 +17,6 @@ function randVdo() {
     let rnd = Math.floor(Math.random() * 5);
     select(".vdo").setAttribute("src", vdoSrc[rnd])
 }
-
 function select(x) {
     return document.querySelector(x);
 }
@@ -35,6 +36,46 @@ function navButtonToggler() {
         select(".openedHeaderListCont").classList.add("block")
     });
 }
+function pageOneAnim() {
+    gsap.set(".scaler", { scale: 10 })
+    gsap.set(".rowlft", { xPercent: 1 })
+    gsap.set(".rowrgt", { xPercent: -3.4 })
+    gsap.set(".headText span", { opacity: 0.05 })
+
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.home',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 2,
+        }
+    });
+
+    tl.to(".layer1", {
+        "--circ": "0%",
+        ease: Power2,
+        duration: 3
+    }, 'a')
+        .to(".scaler", {
+            scale: 1,
+            ease: Power1,
+            duration: 3
+        }, 'a')
+        .to(".rowlft", {
+            xPercent: 5,
+            stagger: 0.1,
+            duration: 8
+        }, 'b')
+        .to(".rowrgt", {
+            xPercent: -8,
+            stagger: 0.1,
+            duration: 8
+        }, 'b')
+        .to(".headText span", {
+            opacity: 0.8,
+            stagger: 0.1,
+        }, 'b')
+}
 function xScroller() {
     gsap.to(".slide", {
         scrollTrigger: {
@@ -44,10 +85,9 @@ function xScroller() {
             scrub: 2,
         },
         xPercent: -100,
-        ease: Power1
+        // ease: Power1
     })
 }
-
 function themeChanger() {
     document.querySelectorAll(".section").forEach((e) => {
         ScrollTrigger.create({
@@ -64,8 +104,7 @@ function themeChanger() {
         })
     })
 }
-
-function verticalPage3Anim(dir) {   
+function verticalPage3Anim(dir) {
     let amount = window.innerWidth < 1280 && window.innerWidth > 768 ? -130 : -10;
 
     let tl2 = gsap.timeline({
@@ -104,7 +143,7 @@ function verticalPage3Anim(dir) {
         scrollTrigger: {
             trigger: ".trigger",
             start: 'bottom-=50 65%',
-            end: 'bottom+=200 65%',
+            end: 'bottom 65%',
             scrub: true,
         },
         x: 100,
@@ -112,53 +151,6 @@ function verticalPage3Anim(dir) {
         stagger: 0.05
     })
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    randVdo();
-    navButtonToggler();
-    xScroller();
-    themeChanger();
-    if (window.innerWidth <= 768) {
-        verticalPage3Anim('y');
-    } else {
-        verticalPage3Anim('x');
-    }
-});
-
-gsap.set(".scaler", { scale: 10 })
-gsap.set(".rowlft", { xPercent: 1 })
-gsap.set(".rowrgt", { xPercent: -3.4 })
-
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 2,
-    }
-});
-
-tl.to(".layer1", {
-    "--circ": "0%",
-    ease: Power2,
-    duration: 3
-}, 'a')
-    .to(".scaler", {
-        scale: 1,
-        ease: Power1,
-        duration: 3
-    }, 'a')
-    .to(".rowlft", {
-        xPercent: 5,
-        stagger: 0.1,
-        duration: 8
-    }, 'b')
-    .to(".rowrgt", {
-        xPercent: -8,
-        stagger: 0.1,
-        duration: 8
-    }, 'b');
-
 function textAnim(x, classes = "") {
     if (window.innerWidth < 670) {
         select(".nixipixi").innerText = 'Nixi';
@@ -170,18 +162,23 @@ function textAnim(x, classes = "") {
     let res = select(x).innerHTML = clutter;
     return res;
 }
-
 textAnim(".headText");
 textAnim(".nixipixi", "relative");
 
-gsap.set(".headText span", {opacity: 0.05})
+document.addEventListener("DOMContentLoaded", function () {
+    randVdo();
+    navButtonToggler();
+    pageOneAnim()
+    xScroller();
+    themeChanger();
+    if (window.innerWidth <= 768) {
+        verticalPage3Anim('y');
+    } else {
+        verticalPage3Anim('x');
+    }
+});
 
-tl.to(".headText span", {
-    opacity: 0.8,
-    stagger: 0.1,
-}, 'b')
-
-gsap.set(".nixipixi span", {'top': '50'})
+gsap.set(".nixipixi span", { 'top': '50' })
 
 gsap.to(".nixipixi span", {
     scrollTrigger: {
