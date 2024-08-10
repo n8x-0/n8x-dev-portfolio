@@ -20,7 +20,7 @@
 }
 
 body[theme='black'] {
-    background-color: var(--black);
+    background: var(--black);
 }
 body[theme='black'] .section, 
 body[theme='black'] header {
@@ -29,7 +29,7 @@ body[theme='black'] header {
 body[theme='cyan'], 
 body[theme='cyan'] header, 
 body[theme='cyan'] .apply {
-    background-color: var(--cyan);
+    background: var(--cyan);
 }
 body[theme='cyan'] .section, 
 body[theme='cyan'] .apply {
@@ -38,9 +38,10 @@ body[theme='cyan'] .apply {
 body[theme='zinc'], 
 body[theme='zinc'] header, 
 body[theme='zinc'] .apply {
-    background-color: var(--zinc);
+    background: var(--zinc);
 }
-body[theme='zinc'] .section, 
+body[theme='zinc'] .section,
+body[theme='zinc'] header, 
 body[theme='zinc'] .apply {
     color: var(--zincTxt);
     border-color: #D8D8D5;
@@ -48,7 +49,7 @@ body[theme='zinc'] .apply {
 body[theme='white'],
 body[theme='white'] header, 
 body[theme='white'] .apply {
-    background-color: var(--white);
+    background: var(--white);
     border-color: var(--zinc);
 }
 body[theme='white'] .section,
@@ -56,12 +57,24 @@ body[theme='white'] .apply {
     color: var(--whiteTxt);
 }
 body[theme='white'] .inp{
-    background-color: var(--whiteInpBg);
+    background: var(--whiteInpBg);
     color: #000;
 }
 body[theme='zinc'] .inp{
-    background-color: var(--zincInpBg);
+    background: var(--zincInpBg);
     color: var(--zincTxt);
+}
+body[theme='black'] .listIcon{
+    background: white;
+}
+body[theme='cyan'] .listIcon{
+    background: #002224;
+}
+body[theme='white'] .loopTop {
+    background: linear-gradient(to left, transparent , #f4f4f5);
+}
+body[theme='zinc'] .loopTop {
+    background: linear-gradient(to left, transparent ,var(--zinc));
 }
 .cardImg{
     filter: hue-rotate(220deg);
@@ -71,8 +84,8 @@ body[theme='zinc'] .inp{
 .layer1{
     clip-path: circle(var(--circ) at 50% 47%);
 }
-body{
-    transition: background-color ease-in-out 0.5s;
+body, .loopTop, .listIcon, .inp, .apply, .section, header {
+    transition: color ease-in 0.2s, background-color ease-in 0.2s; 
 }
 .transCard{
     background-color: #0b2425;
@@ -83,7 +96,7 @@ body{
     scale: 1.15;
     transition: ease-out 0.2s scale;
 }
-#loop>div{
+.loop>div{
     font-weight: 400;
     animation: move 20s linear infinite
 }
@@ -102,4 +115,12 @@ body{
 @font-face {
     font-family: scream;
     src: url('src/SCREAMOU.TTF');
+}
+.nixipixi span{
+    margin: 0 0;
+}
+@media (max-width: 500px) {
+    .nixipixi span {
+        margin: 0 -8px;
+    }
 }

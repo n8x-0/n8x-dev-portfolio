@@ -18,8 +18,7 @@
 
         <!-- header -->
 
-        <header data-color="black"
-            class="section z-[12] md:px-12 sm:px-8 px-4 sm:py-4 py-3 fixed top-0 w-full flex justify-between items-center">
+        <header class="z-[12] md:px-12 sm:px-8 px-4 sm:py-4 py-3 fixed top-0 w-full flex justify-between items-center">
             <div>
                 <h1 class="sm:text-4xl text-3xl cursor-pointer font-semibold font-[sauda]">n8x</h1>
             </div>
@@ -38,8 +37,10 @@
                         <div class="hover:font-bold font-medium cursor-pointer">Social</div>
                     </a>
                 </div>
-                <div class="md:hidden w-8 h-8 bg-black rounded-full flex justify-center items-center" id="headerList">
-                    <i class="fa-solid fa-bars-staggered fa-flip-horizontal fa-md h-4" style="color: #ffffff;"></i>
+                <div class="listIcon md:hidden w-8 h-8 bg-black rounded-full flex justify-center items-center"
+                    id="headerList">
+                    <i class="fa-solid fa-bars-staggered fa-flip-horizontal fa-md h-4 mix-blend-difference"
+                        style="color: #ffffff;"></i>
                 </div>
                 <a href="#contact">
                     <div
@@ -80,7 +81,7 @@
                     <video class="vdo h-screen w-full object-cover" autoplay loop muted></video>
                 </div>
                 <div class="layer2 w-full h-screen relative overflow-hidden">
-                    <div class="w-full flex justify-center items-center sm:mt-24 mt-14 p-6">
+                    <div class="w-full flex justify-center items-center sm:mt-24 mt-16 p-6">
                         <h1
                             class="headText sm:text-[1.8rem] text-xl font-[490] font-roboto md:w-[30%] w-3/4 text-center tracking-tighter sm:leading-8 leading-6">
                             Welcome to the developer portfolio its Syed Shayan
@@ -314,7 +315,7 @@
                         </div>
                     </div>
                     <div
-                        class="absolute bottom-10 z-[12] sm:text-md text-sm font-medium tracking-tight sm:leading-6 leading-5 sm:px-12 px-6 sm:m-0 mb-8">
+                        class="absolute bottom-10 z-[12] sm:text-md text-sm sm:font-medium font-light tracking-tight sm:leading-6 leading-5 sm:px-12 px-6 sm:m-0 mb-8">
                         We build big ideas. <br>
                         Software. Apps. Tools. <br>
                         For real people. Real lives.
@@ -326,10 +327,12 @@
         <!-- pg2 -->
 
         <div class="page2 w-full" id="skills">
-            <div data-color="cyan" class="pg2Sec section w-full sm:p-12 p-4 relative lg:flex-row flex-col flex justify-between items-start gap-6 overflow-hidden lg:overflow-visible sm:pt-20">
+            <div data-color="cyan"
+                class="pg2Sec section w-full sm:p-12 p-4 relative lg:flex-row flex-col flex justify-between items-start gap-6 overflow-hidden lg:overflow-visible sm:pt-20">
                 <div class="font-[meua] sticky top-0 left-0 lg:w-2/5 w-full">
                     <div class="sm:mt-28">
-                        <p class="md:text-xl sm:text-lg text-md font-bold sm:leading-8 leading-6 sm:my-10 my-3 mt-16 sm:mt-0">
+                        <p
+                            class="md:text-xl sm:text-lg text-md font-bold sm:leading-8 leading-6 sm:my-10 my-3 mt-16 sm:mt-0">
                             Welcome to my portfolio! I am a passionate and skilled web developer with expertise in the
                             MERN
                             stack, Next.js, Python, JavaScript, and TypeScript. With a strong foundation in both
@@ -350,32 +353,33 @@
                         </a>
                     </div>
                 </div>
-                <div class="cardCont lg:w-[50%] w-full flex sm:gap-8 gap-4 lg:flex-col lg:justify-center lg:items-center lg:py-[40rem] py-6 flex-wrap">
+                <div
+                    class="cardCont lg:w-[50%] w-full flex sm:gap-8 gap-4 lg:flex-col lg:justify-center lg:items-center lg:py-[40rem] py-6 flex-wrap">
                     <div
-                        class="card lg:w-2/3 sm:w-[25rem] w-full flex justify-between items-center border-[1px] border-[--cyanTxt] rounded-sm sm:p-6 p-3">
+                        class="card lg:w-2/3 sm:w-[25rem] w-full flex justify-between items-center border-[1px] border-[--cyanTxt] rounded-sm p-3 py-8">
                         <div class="lg:w-[80%] w-full">
                             <h1 class="sm:text-[1.7rem] text-xl font-medium tracking-tighter pb-2">Languages</h1>
-                            <p class="sm:text-[1.04rem] text-md font-medium tracking-tight leading-5">Highly
+                            <p class="sm:text-[1.04rem] text-md tracking-tight leading-5">Highly
                                 proefficient
                                 with JS and
                                 TS, built many self improving projects with them, also an intermediate with python.</p>
                         </div>
                     </div>
                     <div
-                        class="card lg:w-2/3 sm:w-[25rem] w-full flex justify-between items-center border-[1px] border-[--cyanTxt] rounded-sm sm:p-6 p-3">
+                        class="card lg:w-2/3 sm:w-[25rem] w-full flex justify-between items-center border-[1px] border-[--cyanTxt] rounded-sm p-3 py-8">
                         <div class="lg:w-[80%] full">
                             <h1 class="sm:text-[1.7rem] text-xl font-medium tracking-tighter pb-2">Framework & Libs</h1>
-                            <p class="sm:text-[1.04rem] text-md font-medium tracking-tight leading-5">Actively using and
+                            <p class="sm:text-[1.04rem] text-md tracking-tight leading-5">Actively using and
                                 learning
                                 NextJS, ReactJS, ExpressJS, NodeJS and TailwindCSS, highly proefficient with
                                 TailwindCSS.</p>
                         </div>
                     </div>
                     <div
-                        class="card lg:w-2/3 sm:w-[25rem] w-full flex justify-between items-center border-[1px] border-[--cyanTxt] rounded-sm sm:p-6 p-3">
+                        class="card lg:w-2/3 sm:w-[25rem] w-full flex justify-between items-center border-[1px] border-[--cyanTxt] rounded-sm p-3 py-8">
                         <div class="lg:w-[80%] w-full">
                             <h1 class="sm:text-[1.7rem] text-xl font-medium tracking-tighter pb-2">Tools</h1>
-                            <p class="sm:text-[1.04rem] text-md font-medium tracking-tight leading-5">Have been using
+                            <p class="sm:text-[1.04rem] text-md tracking-tight leading-5">Have been using
                                 MongoDB
                                 for
                                 db, firebase for hosting and other tools like gsap locomotive scrolltrigger for
@@ -383,10 +387,10 @@
                         </div>
                     </div>
                     <div
-                        class="card lg:w-2/3 sm:w-[25rem] w-full flex justify-between items-center border-[1px] border-[--cyanTxt] rounded-sm sm:p-6 p-3">
+                        class="card lg:w-2/3 sm:w-[25rem] w-full flex justify-between items-center border-[1px] border-[--cyanTxt] rounded-sm p-3 py-8">
                         <div class="lg:w-[80%] w-full">
                             <h1 class="sm:text-[1.7rem] text-xl font-medium tracking-tighter pb-2">Other Skills</h1>
-                            <p class="sm:text-[1.04rem] text-md font-medium tracking-tight leading-5">As a fast and
+                            <p class="sm:text-[1.04rem] text-md tracking-tight leading-5">As a fast and
                                 self-motivated
                                 learner with an obsession for tech, I am also enthusiastic about ethical hacking and
                                 video editing.</p>
@@ -401,14 +405,15 @@
         <div data-color="white" class="xScroller w-full section font-[meua]" id="projects">
             <div class="cont h-[200vh] relative">
                 <div class="trigger overflow-hidden sticky top-0 left-0 flex w-full h-[100vh]">
-                    <div class="slide w-full h-screen flex-shrink-0 justify-center items-center sm:p-12 relative">
-                        <h1 class="sm:text-6xl text-4xl text-center md:mb-12 px-4 mt-20 tracking-tighter">Crafting with skills
+                    <div class="slide w-full h-screen flex-shrink-0 justify-center items-center sm:p-12">
+                        <h1 class="sm:text-6xl text-4xl text-center md:mb-12 px-4 mt-20 tracking-tighter">Crafting with
+                            skills
                         </h1>
                         <div class="flex w-full justify-between">
                             <div
-                                class="capsulesContainer xl:w-fit w-full h-fit md:h-screen flex md:justify-normal xl:items-start sm:items-center justify-center md:flex-col flex-row md:gap-6 gap-3 lg:p-12 p-4 translate-x-[0%] lg:mt-0 md:mt-10 mt-4">
+                                class="capsulesContainer xl:w-fit w-full h-fit md:h-screen flex md:justify-normal xl:items-start sm:items-center justify-center md:flex-col flex-row md:gap-6 gap-3 lg:p-12 p-4 translate-x-[0%] lg:mt-0 md:mt-10 mt-12">
                                 <div
-                                    class="capsSkillsRgt relative h-fit w-fit shadow-xl bg-zinc-100 rounded-full flex-col md:flex-row flex items-center justify-center sm:p-6 p-4 sm:text-4xl text-3xl md:gap-5 gap-3 font-[580]">
+                                    class="capsSkillsRgt relative h-fit w-fit shadow-xl bg-zinc-100 rounded-full flex-col md:flex-row flex items-center justify-center sm:p-6 p-5 sm:text-4xl text-[1.6rem] leading-5 tracking-tight md:gap-5 gap-3 font-[580]">
                                     <div
                                         class="absolute sm:top-0 top-10 left-0 h-full w-full flex items-center justify-end">
                                         <h1
@@ -417,13 +422,12 @@
                                         </h1>
                                     </div>
                                     <div
-                                        class="capsImg md:w-28 md:h-28 sm:w-20 sm:h-20 w-14 h-14 shadow-xl rounded-full overflow-hidden">
+                                        class="capsImg md:w-28 md:h-28 sm:w-20 sm:h-20 w-16 h-16 shadow-xl rounded-full overflow-hidden">
                                         <img src="https://d2thvodm3xyo6j.cloudfront.net/media/2021/01/152b2dd08840859b-1200x675.jpg"
                                             alt="" class="w-full h-full object-cover">
                                     </div>
                                     <span class="skillIcon md:w-20 md:h-20 sm:w-16 sm:h-16 w-12 h-12 overflow-hidden">
-                                        <img src="src/javascript.png"
-                                            alt="" class="w-full h-full object-cover">
+                                        <img src="src/javascript.png" alt="" class="w-full h-full object-cover">
                                     </span>
                                     <span class="skillIcon md:w-20 md:h-20 sm:w-16 sm:h-16 w-12 h-12 overflow-hidden">
                                         <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-typescript-11492969-9325304.png?f=webp"
@@ -435,7 +439,7 @@
                                     </span>
                                 </div>
                                 <div
-                                    class="capsSkill relative h-fit w-fit shadow-xl bg-zinc-100 rounded-full flex-col md:flex-row flex items-center justify-center sm:p-6 p-4 sm:text-4xl text-3xl md:gap-5 gap-3 md:translate-y-0 translate-y-16">
+                                    class="capsSkill relative h-fit w-fit shadow-xl bg-zinc-100 rounded-full flex-col md:flex-row flex items-center justify-center sm:p-6 p-5 sm:text-4xl text-[1.6rem] leading-5 tracking-tight md:gap-5 gap-3 md:translate-y-0 translate-y-16">
                                     <div
                                         class="absolute sm:top-0 top-10 left-0 h-full w-full flex items-center justify-end">
                                         <h1
@@ -444,7 +448,7 @@
                                         </h1>
                                     </div>
                                     <div
-                                        class="capsImg shadow-xl md:w-28 md:h-28 sm:w-20 sm:h-20 w-14 h-14 bg-black rounded-full overflow-hidden">
+                                        class="capsImg shadow-xl md:w-28 md:h-28 sm:w-20 sm:h-20 w-16 h-16 bg-black rounded-full overflow-hidden">
                                         <img src="https://d2thvodm3xyo6j.cloudfront.net/media/2020/02/39e9778a3748e687-600x338.jpg"
                                             alt="" class="w-full h-full object-cover">
                                     </div>
@@ -460,12 +464,11 @@
                                             class="w-full h-full object-cover">
                                     </span>
                                     <span class="skillIcon md:w-20 md:h-20 sm:w-16 sm:h-16 w-12 h-12 overflow-hidden">
-                                        <img src="src/tailwind.webp"
-                                            alt="" class="w-full h-full object-cover">
+                                        <img src="src/tailwind.webp" alt="" class="w-full h-full object-cover">
                                     </span>
                                 </div>
                                 <div
-                                    class="capsSkillsLft relative h-fit w-fit shadow-xl bg-zinc-100 rounded-full flex-col md:flex-row flex items-center justify-center sm:p-6 p-4 sm:text-4xl text-3xl md:gap-5 gap-3 md:translate-y-0 translate-y-56">
+                                    class="capsSkillsLft relative h-fit w-fit shadow-xl bg-zinc-100 rounded-full flex-col md:flex-row flex items-center justify-center sm:p-6 p-5 sm:text-4xl text-[1.6rem] leading-5 tracking-tight md:gap-5 gap-3 md:translate-y-0 translate-y-56">
                                     <div
                                         class="absolute sm:top-0 top-10 left-0 h-full w-full flex items-center justify-end">
                                         <h1
@@ -474,7 +477,7 @@
                                         </h1>
                                     </div>
                                     <div
-                                        class="capsImg shadow-xl md:w-28 md:h-28 sm:w-20 sm:h-20 w-14 h-14 bg-black rounded-full overflow-hidden">
+                                        class="capsImg shadow-xl md:w-28 md:h-28 sm:w-20 sm:h-20 w-16 h-16 bg-black rounded-full overflow-hidden">
                                         <img src="https://m.media-amazon.com/images/M/MV5BMTRkZjMwOWEtZDg4Yi00NjRkLTkxOGItNWE0MTA0NTQ2NDFkXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg"
                                             alt="" class="w-full h-full object-cover">
                                     </div>
@@ -486,8 +489,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div
-                                class="w-[45%] h-[80%] sm:text-lg text-md xl:flex hidden justify-between items-end py-12 flex-col">
+                            <div class="w-[45%] xl:flex hidden text-lg items-end py-12 text-black">
                                 <p class="w-full h-full font-bold leading-8 text-right">In my web development projects,
                                     I utilize a diverse toolkit to create dynamic and engaging digital experiences. By
                                     incorporating advanced technologies like Locomotive ScrollTrigger and GSAP, I bring
@@ -498,15 +500,17 @@
                                     standards of security and best practices. This blend of skills and tools enables me
                                     to deliver robust, visually captivating, and secure web solutions.</p>
                             </div>
-                        </div>
-                        <div
-                            class="absolute bottom-0 right-0 flex justify-center items-center bg-zinc-800 text-white rounded-full text-2xl sm:m-12 m-4 sm:mb-0 mb-10 sm:px-6 sm:py-4 px-4 py-2 shadow-md">
-                            →
+                            <div
+                                class="absolute bottom-0 right-0 flex justify-center items-center border-zinc-800 border-[1px] rounded-full text-2xl sm:m-12 m-4 sm:px-6 sm:py-4 px-4 py-2 shadow-md">
+                                →
+                            </div>
                         </div>
                     </div>
                     <div class="slide w-full h-screen flex flex-col flex-shrink-0 items-center justify-center relative md:p-12"
                         id="projects">
-                        <h1 class="sm:text-6xl text-5xl text-center md:mb-12 p-4 sm:mt-16 mt-14 z-50 md:block hidden">Project</h1>
+                        <h1
+                            class="sm:text-6xl text-5xl text-center md:mb-12 p-4 sm:mt-16 mt-14 z-50 md:block hidden">
+                            Project</h1>
                         <div
                             class="projectCardCont 2xl:w-[80%] w-full h-screen flex sm:flex-row flex-col flex-wrap justify-center items-center sm:p-12 p-4 sm:gap-4 gap-2 md:mt-0 mt-10 z-50">
                             <div
@@ -520,7 +524,8 @@
                                     Stacks used: JS, Tailwind, Firebase
                                 </p>
                                 <a href="https://todo-app-2fade.web.app/">
-                                    <div class="w-full bg-zinc-800 text-white text-center rounded-3xl sm:mt-4 m-0 py-2">
+                                    <div
+                                        class="w-full bg-zinc-800 text-white text-center rounded-3xl sm:mt-4 m-0 py-2">
                                         GO</div>
                                 </a>
                             </div>
@@ -535,7 +540,8 @@
                                     Stacks used: JS, CSS, Firebase
                                 </p>
                                 <a href="https://quiz-app-cef80.web.app/">
-                                    <div class="w-full bg-zinc-800 text-white text-center rounded-3xl sm:mt-4 m-0 py-2">
+                                    <div
+                                        class="w-full bg-zinc-800 text-white text-center rounded-3xl sm:mt-4 m-0 py-2">
                                         GO</div>
                                 </a>
                             </div>
@@ -550,17 +556,20 @@
                                     Stacks used: TypeScript, inquirer
                                 </p>
                                 <a href="https://github.com/n8x-0/AssignmentProjects">
-                                    <div class="w-full bg-zinc-800 text-white text-center rounded-3xl sm:mt-4 m-0 py-2">
+                                    <div
+                                        class="w-full bg-zinc-800 text-white text-center rounded-3xl sm:mt-4 m-0 py-2">
                                         GO</div>
                                 </a>
                             </div>
                         </div>
-                        <div class="prjCardsBg z-0 absolute top-1/2 left-0 right-0 w-full -translate-y-1/2 text-white">
+                        <div
+                            class="prjCardsBg z-0 absolute top-1/2 left-0 right-0 w-full -translate-y-1/2 text-white">
                             <div class="relative w-full">
-                                <div class="absolute w-full h-full bg-gradient-to-l from-transparent to-zinc-100 z-40">
+                                <div
+                                    class="loopTop absolute w-full h-full z-40">
                                 </div>
-                                <div id="loop"
-                                    class="flex z-0 w-full whitespace-nowrap text-black overflow-hidden cursor-not-allowed">
+                                <div
+                                    class="loop flex z-0 w-full whitespace-nowrap text-black overflow-hidden cursor-not-allowed">
                                     <div class="sm:text-7xl text-6xl font-bold font-serif">&nbsp; WE <i
                                             class="font-[scream]">BRING</i> YOUR
                                         <b>BUISNESS</b> TO
@@ -574,10 +583,11 @@
                                 </div>
                             </div>
                             <div class="relative w-full">
-                                <div class="absolute w-full h-full bg-gradient-to-l from-transparent to-zinc-100 z-40">
+                                <div
+                                    class="loopTop absolute w-full h-full z-40">
                                 </div>
-                                <div id="loop"
-                                    class="flex z-0 w-full whitespace-nowrap text-black overflow-hidden cursor-not-allowed">
+                                <div
+                                    class="loop flex z-0 w-full whitespace-nowrap text-black overflow-hidden cursor-not-allowed">
                                     <div class="sm:text-8xl text-5xl font-bold font-serif">&nbsp; PROJECTS <i
                                             class="font-[scream]">DATABASE</i> RElIABILITY
                                         <b>APPLICATIONS</b> MERN
@@ -591,10 +601,11 @@
                                 </div>
                             </div>
                             <div class="relative w-full">
-                                <div class="absolute w-full h-full bg-gradient-to-l from-transparent to-zinc-100 z-40">
+                                <div
+                                    class="loopTop absolute w-full h-full z-40">
                                 </div>
-                                <div id="loop"
-                                    class="flex z-0 w-full whitespace-nowrap text-black overflow-hidden cursor-not-allowed">
+                                <div
+                                    class="loop flex z-0 w-full whitespace-nowrap text-black overflow-hidden cursor-not-allowed">
                                     <div class="text-8xl font-bold font-serif">&nbsp; WE <i
                                             class="font-[scream]">BRING</i> YOUR
                                         <b>BUISNESS</b> TO

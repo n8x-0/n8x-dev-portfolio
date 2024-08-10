@@ -79,7 +79,7 @@ function pageOneAnim() {
             stagger: 0.1,
         }, 'b')
 }
-function cyanCardsAnim(){
+function cyanCardsAnim() {
     if (window.innerWidth <= 1024) {
         document.querySelectorAll(".card").forEach(e => {
             gsap.to(e, {
@@ -93,7 +93,7 @@ function cyanCardsAnim(){
                 'color': '#AEDEE0',
             })
         })
-    
+
     } else {
         gsap.set(".card", { scaleX: 1 })
         document.querySelectorAll(".card").forEach(e => {
@@ -132,6 +132,7 @@ function xScroller() {
             start: '35% top',
             end: 'bottom bottom',
             scrub: 2,
+            // markers: true
         },
         xPercent: -100,
     })
@@ -220,33 +221,37 @@ function textAnim(x, classes = "") {
     let res = select(x).innerHTML = clutter;
     return res;
 }
-textAnim(".headText");
-textAnim(".nixipixi", "relative");
-
-
-randVdo();
-navButtonToggler();
-pageOneAnim()
-cyanCardsAnim();
-xScroller();
-themeChanger();
-
-if (window.innerWidth <= 768) {
-    verticalPage3Anim('y');
-} else {
-    verticalPage3Anim('x');
+function nixiPixiAnim() {
+    gsap.set(".nixipixi span", { 'top': '50' })
+    gsap.to(".nixipixi span", {
+        scrollTrigger: {
+            trigger: ".page4",
+            start: "top 10%",
+            end: 'bottom bottom',
+            scrub: 1,
+            // markers: true
+        },
+        'top': '0',
+        stagger: 0.04,
+        ease: 'circ'
+    })
 }
 
-gsap.set(".nixipixi span", { 'top': '50' })
-gsap.to(".nixipixi span", {
-    scrollTrigger: {
-        trigger: ".page4",
-        start: "top 10%",
-        end: 'bottom bottom',
-        scrub: 1,
-        // markers: true
-    },
-    'top': '0',
-    stagger: 0.04,
-    ease: 'circ'
-})
+document.addEventListener('DOMContentLoaded', () => {
+    textAnim(".headText");
+    textAnim(".nixipixi", "relative");
+
+    randVdo();
+    navButtonToggler();
+    themeChanger();
+    pageOneAnim()
+    cyanCardsAnim();
+    xScroller();
+    nixiPixiAnim()
+
+    if (window.innerWidth <= 768) {
+        verticalPage3Anim('y');
+    } else {
+        verticalPage3Anim('x');
+    }
+});
